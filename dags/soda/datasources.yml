@@ -1,0 +1,16 @@
+postgres:
+  #database:
+  # schema: [table1, table2]
+  zoo:
+    animals: [mammal, fish]
+    employees: [name, contact_information, salary]
+  shop:
+    products: [id, price]
+
+bigquery:
+  # project:
+  #   dataset: [table1, table2]
+  my-gcp-project: 
+    DWH: [revenue, visitors, expense]
+  # my-gcp-project2:
+    # dataset: [table1, table2]

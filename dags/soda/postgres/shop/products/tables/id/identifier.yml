@@ -1,0 +1,5 @@
+table_name: customers
+metrics:
+  - row_count
+tests:
+  - row_count > 0

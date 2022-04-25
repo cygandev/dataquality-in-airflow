@@ -9,6 +9,9 @@ from airflow.operators.dummy import DummyOperator
 from airflow.operators.python import PythonVirtualenvOperator
 from airflow.utils.task_group import TaskGroup
 
+# Timezone
+local_tz = pendulum.timezone("Europe/Paris")
+
 PROJECT = os.getenv("GCP_PROJECT", "local") 
 
 if PROJECT == "my-gcp-project-name-PROD": 
@@ -22,9 +25,6 @@ else:
     print("do_something locally")
 
 DAGS_DIR = os.getenv("DAGS_FOLDER", "./dags") # for composer = /home/airflow/gcs/dags
-
-# Timezone
-local_tz = pendulum.timezone("Europe/Paris")
 
 try:
     with open(f"{DAGS_DIR}/soda/datasources.yml", "r") as f:

@@ -27,7 +27,7 @@ dags/soda
 │ ├── <schema>                        'All tests for a specific postgres schema'
 │ │ └── tables
 │ │   └── <table>                     'All tests for a specific table'
-│ │		└── <test>.yml                'All scan YAMLs for table'
+│ │      └── <test>.yml               'All scan YAMLs for table'
 ├── dag_creator_soda_bq.py            'DAG definition for bigquery'
 ├── dag_creator_soda_pg.py            'DAG definition for postgres'
 ├── datasources.yml                   'Datasources config file'
